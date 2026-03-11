@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class MilestoneResource extends Resource
 {
     protected static ?string $model = Milestone::class;
+    protected static ?string $recordTitleAttribute = 'title';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -48,10 +49,8 @@ class MilestoneResource extends Resource
                 Tables\Columns\TextColumn::make('date')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('subtitle')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('subtitle'),
                 Tables\Columns\TextColumn::make('sort_order')
                     ->numeric()
                     ->sortable(),

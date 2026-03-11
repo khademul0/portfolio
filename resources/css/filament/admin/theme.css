@@ -1,0 +1,10 @@
+/* Remove the dark backdrop overlay that appears during global search */
+.fi-global-search-field+div[x-show],
+body>div[x-show][class*="bg-gray-950"],
+body>div.fixed.inset-0.bg-gray-950\/50,
+.fixed.inset-0.bg-gray-950\/50,
+.fi-global-search-results-ctn~.fixed.inset-0 {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

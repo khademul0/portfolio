@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class SkillResource extends Resource
 {
     protected static ?string $model = Skill::class;
+    protected static ?string $recordTitleAttribute = 'name';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -46,13 +47,13 @@ class SkillResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('name'),
+
                 Tables\Columns\TextColumn::make('level')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('group')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('group'),
+
                 Tables\Columns\TextColumn::make('sort_order')
                     ->numeric()
                     ->sortable(),

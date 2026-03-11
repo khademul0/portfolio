@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ExperienceResource extends Resource
 {
     protected static ?string $model = Experience::class;
+    protected static ?string $recordTitleAttribute = 'company';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -49,18 +50,15 @@ class ExperienceResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('company')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('role')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('company'),
+                Tables\Columns\TextColumn::make('role'),
                 Tables\Columns\TextColumn::make('start_date')
                     ->date()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('end_date')
                     ->date()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('type')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('type'),
                 Tables\Columns\IconColumn::make('is_published')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')

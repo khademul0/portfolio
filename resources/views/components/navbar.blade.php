@@ -6,7 +6,7 @@
         {{-- Logo --}}
         <div class="flex-shrink-0">
           <a href="{{ url('/') }}" class="font-bold text-xl tracking-tight flex items-center gap-2 group">
-            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-sky-400 text-white flex items-center justify-center font-bold text-sm shadow-md group-hover:rotate-12 group-hover:scale-110 transition-transform duration-300">
+            <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-indigo-500 via-purple-500 to-sky-400 text-white flex items-center justify-center font-bold text-sm shadow-md group-hover:rotate-[15deg] group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
               {{ substr(config('app.name'), 0, 1) }}
             </div>
             <span class="text-slate-800 dark:text-white">{{ config('app.name') }}</span>
@@ -16,10 +16,10 @@
         {{-- Desktop Navigation Links --}}
         <div class="hidden md:block">
           <div class="flex items-center space-x-2">
-            <a href="/#about" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/50 dark:hover:bg-white/10 transition-all">About</a>
-            <a href="/#portfolio" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/50 dark:hover:bg-white/10 transition-all">Portfolio</a>
-            <a href="/#resume" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/50 dark:hover:bg-white/10 transition-all">Resume</a>
-            <a href="/#blog" class="px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100/50 dark:hover:bg-white/10 transition-all">Blog</a>
+            <a href="/#about" class="relative px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-slate-900 dark:after:bg-white after:transition-all after:duration-300 hover:after:w-1/2">About</a>
+            <a href="/#portfolio" class="relative px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-slate-900 dark:after:bg-white after:transition-all after:duration-300 hover:after:w-1/2">Portfolio</a>
+            <a href="/#resume" class="relative px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-slate-900 dark:after:bg-white after:transition-all after:duration-300 hover:after:w-1/2">Resume</a>
+            <a href="/#blog" class="relative px-4 py-2 rounded-full text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-all duration-300 after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:h-[2px] after:w-0 after:bg-slate-900 dark:after:bg-white after:transition-all after:duration-300 hover:after:w-1/2">Blog</a>
           </div>
         </div>
 
@@ -29,7 +29,7 @@
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
           </button>
           
-          <a href="/#contact" class="group relative inline-flex items-center justify-center px-6 py-2 text-sm font-medium text-white transition-all duration-200">
+          <a href="/#contact" class="group relative inline-flex items-center justify-center px-6 py-2 text-sm font-medium text-white hover:scale-[1.03] active:scale-95 transition-all duration-300">
              <span class="absolute inset-0 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-sky-400 blur-[2px] opacity-70 group-hover:opacity-100 transition-opacity"></span>
              <span class="absolute inset-0 rounded-full bg-slate-900 dark:bg-white"></span>
              <span class="relative text-white dark:text-slate-900 group-hover:-translate-y-0.5 transition-transform">Hire Me</span>

@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class PostResource extends Resource
 {
     protected static ?string $model = Post::class;
+    protected static ?string $recordTitleAttribute = 'title';
 
     protected static ?string $navigationIcon = 'heroicon-o-document-text';
     protected static ?string $navigationGroup = 'Content';
@@ -65,10 +66,8 @@ class PostResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('slug'),
                 Tables\Columns\ImageColumn::make('cover_image'),
                 Tables\Columns\IconColumn::make('is_published')
                     ->boolean(),

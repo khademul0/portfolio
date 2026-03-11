@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ContactSubmissionResource extends Resource
 {
     protected static ?string $model = ContactSubmission::class;
+    protected static ?string $recordTitleAttribute = 'subject';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -47,16 +48,11 @@ class ContactSubmissionResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('email')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('subject')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('ip_hash')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('user_agent')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('name'),
+                Tables\Columns\TextColumn::make('email'),
+                Tables\Columns\TextColumn::make('subject'),
+                Tables\Columns\TextColumn::make('ip_hash'),
+                Tables\Columns\TextColumn::make('user_agent'),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

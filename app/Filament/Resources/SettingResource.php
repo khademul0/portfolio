@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class SettingResource extends Resource
 {
     protected static ?string $model = Setting::class;
+    protected static ?string $recordTitleAttribute = 'key';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -44,8 +45,8 @@ class SettingResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('key')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('key'),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

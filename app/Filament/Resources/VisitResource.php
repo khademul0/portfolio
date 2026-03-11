@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class VisitResource extends Resource
 {
     protected static ?string $model = Visit::class;
+    protected static ?string $recordTitleAttribute = 'url';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -40,12 +41,12 @@ class VisitResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('ip_hash')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('user_agent')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('url')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('ip_hash'),
+
+                Tables\Columns\TextColumn::make('user_agent'),
+
+                Tables\Columns\TextColumn::make('url'),
+
                 Tables\Columns\TextColumn::make('visited_at')
                     ->date()
                     ->sortable(),

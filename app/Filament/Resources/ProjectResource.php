@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ProjectResource extends Resource
 {
     protected static ?string $model = Project::class;
+    protected static ?string $recordTitleAttribute = 'title';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -65,17 +66,17 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('project_category_id')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('title')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('excerpt')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('title'),
+
+                Tables\Columns\TextColumn::make('slug'),
+
+                Tables\Columns\TextColumn::make('excerpt'),
+
                 Tables\Columns\ImageColumn::make('cover_image'),
-                Tables\Columns\TextColumn::make('live_url')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('github_url')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('live_url'),
+
+                Tables\Columns\TextColumn::make('github_url'),
+
                 Tables\Columns\IconColumn::make('is_featured')
                     ->boolean(),
                 Tables\Columns\IconColumn::make('is_published')

@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class ProjectCategoryResource extends Resource
 {
     protected static ?string $model = ProjectCategory::class;
+    protected static ?string $recordTitleAttribute = 'name';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -42,10 +43,10 @@ class ProjectCategoryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('name'),
+
+                Tables\Columns\TextColumn::make('slug'),
+
                 Tables\Columns\TextColumn::make('sort_order')
                     ->numeric()
                     ->sortable(),
