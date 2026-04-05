@@ -62,7 +62,7 @@
              @endif
              @if($facebook = \App\Models\Setting::get('social_facebook'))
                <a href="{{ $facebook }}" target="_blank" class="pointer-events-auto absolute bottom-[20%] -right-2 lg:-right-6 flex items-center justify-center w-12 h-12 rounded-2xl border border-slate-200/50 dark:border-white/10 bg-white/70 dark:bg-white/5 backdrop-blur-md shadow-xl hover:scale-[1.2] hover:rotate-[10deg] hover:bg-white dark:hover:bg-white/20 hover:shadow-indigo-500/20 transition-all duration-300 text-slate-700 dark:text-slate-300" style="animation: floatMove 5.5s ease-in-out infinite 1.5s;">
-                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.9 8.04 9.8v-7.1h-2.3v-2.7h2.3V9.8c0-2.4 1.4-3.7 3.5-3.7 1.04 0 2.14.19 2.14.19v2.3h-1.2c-1.18 0-1.54.73-1.54 1.48v1.93h2.64l-.42 2.7h-2.22v7.1C18.56 20.9 22 16.84 22 12z"/></svg>
                </a>
              @endif
           </div>

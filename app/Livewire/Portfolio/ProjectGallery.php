@@ -29,6 +29,7 @@ class ProjectGallery extends Component
             ->get();
 
         $projects = Project::query()
+            ->with('category')
             ->where('is_published', true)
             ->when($this->category, function ($q) {
                 $q->whereHas('category', fn($cq) => $cq->where('slug', $this->category));

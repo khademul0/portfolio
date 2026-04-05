@@ -3,10 +3,11 @@ import './bootstrap'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Lenis from '@studio-freight/lenis'
-import Alpine from 'alpinejs'
+import { Livewire, Alpine } from '../../vendor/livewire/livewire/dist/livewire.esm'
+import Collapse from '@alpinejs/collapse'
 
-window.Alpine = Alpine
-Alpine.start()
+Alpine.plugin(Collapse)
+Livewire.start()
 
 gsap.registerPlugin(ScrollTrigger)
 

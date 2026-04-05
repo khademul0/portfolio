@@ -34,6 +34,7 @@
 
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   @livewireStyles
+  @livewireScriptConfig
 </head>
 
 <body class="min-h-screen">
@@ -48,7 +49,5 @@
 
   {{-- Footer --}}
   <x-footer />
-
-  @livewireScripts
 </body>
 </html>
