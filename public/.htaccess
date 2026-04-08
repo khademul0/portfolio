@@ -9,6 +9,10 @@
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 
+    # Preserve POST method and request body (fixes cPanel POST -> GET stripping)
+    RewriteCond %{REQUEST_METHOD} POST
+    RewriteRule .* - [E=HTTP_REQUEST_METHOD:POST]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
