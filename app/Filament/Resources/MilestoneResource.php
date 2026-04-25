@@ -38,7 +38,7 @@ class MilestoneResource extends Resource
                     ->numeric()
                     ->default(0),
                 Forms\Components\Toggle::make('is_published')
-                    ->required(),
+                    ->default(true),
             ]);
     }
 

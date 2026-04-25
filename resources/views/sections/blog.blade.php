@@ -8,7 +8,7 @@
         </h2>
       </div>
       
-      <a href="#" class="text-sm font-semibold hover:underline text-slate-600 dark:text-slate-300 gs-reveal">
+      <a href="{{ url('/#blog') }}" class="text-sm font-semibold hover:underline text-slate-600 dark:text-slate-300 gs-reveal">
         View all posts →
       </a>
     </div>

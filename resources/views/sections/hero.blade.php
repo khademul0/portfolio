@@ -10,20 +10,20 @@
 
       {{-- LEFT: Text Content --}}
       <div class="flex-1 pb-16 md:pb-24 text-center md:text-left self-center">
-        <p class="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 px-4 py-1.5 text-sm font-medium backdrop-blur anim-hero-text opacity-0">
+        <p class="inline-flex items-center gap-2 rounded-full border border-slate-200 dark:border-white/10 bg-white/60 dark:bg-white/5 px-4 py-1.5 text-sm font-medium backdrop-blur anim-hero-text">
           👋 Hi, I'm <span class="font-semibold text-slate-900 dark:text-white">Khademul Islam</span>
         </p>
 
         <h1 class="mt-5 text-4xl md:text-6xl font-semibold tracking-tight leading-[1.08]">
-          <span class="hero-line block opacity-0 anim-hero-text">{{ \App\Models\Setting::get('hero_tagline', 'Full-Stack Developer') }}</span>
-          <span class="hero-line block opacity-0 text-gradient anim-hero-text">building fast, elegant web apps.</span>
+          <span class="hero-line block anim-hero-text">{{ \App\Models\Setting::get('hero_tagline', 'Full-Stack Developer') }}</span>
+          <span class="hero-line block text-gradient anim-hero-text">building fast, elegant web apps.</span>
         </h1>
 
-        <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed anim-hero-text opacity-0">
+        <p class="mt-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed anim-hero-text">
           {{ \App\Models\Setting::get('hero_bio', 'I specialize in Laravel, modern UI, and scalable backends. I build products that look premium, load fast, and convert.') }}
         </p>
 
-        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start anim-hero-buttons opacity-0">
+        <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center md:justify-start anim-hero-buttons">
           <a href="#contact"
              class="inline-flex items-center justify-center rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-6 py-3 text-sm font-semibold hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-900/20 dark:hover:shadow-white/20 active:translate-y-0 transition-all duration-300">
             Contact Me
@@ -34,13 +34,13 @@
           </a>
         </div>
 
-        <div class="mt-10 flex items-center gap-6 text-sm text-slate-500 dark:text-slate-300 justify-center md:justify-start anim-hero-text opacity-0">
+        <div class="mt-10 flex items-center gap-6 text-sm text-slate-500 dark:text-slate-300 justify-center md:justify-start anim-hero-text">
           <span>PHP</span><span>Laravel</span><span>Tailwind</span><span>Node.js</span><span>MongoDB</span>
         </div>
       </div>
 
       {{-- RIGHT: Profile Photo — no border, blends into background --}}
-      <div class="relative flex-shrink-0 anim-hero-image opacity-0 self-start">
+      <div class="relative flex-shrink-0 anim-hero-image self-start">
         @if(!empty($heroImage))
 
           {{-- Floating Social Buttons --}}

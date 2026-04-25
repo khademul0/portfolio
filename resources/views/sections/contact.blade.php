@@ -55,9 +55,7 @@
       </div>
 
       <div class="gs-reveal">
-        <div class="rounded-2xl border border-slate-200 dark:border-white/10 p-6 md:p-8 bg-white dark:bg-slate-950/20 shadow-sm">
-          <livewire:contact.contact-form />
-        </div>
+        <livewire:contact.contact-form />
       </div>
     </div>
   </div>

@@ -17,11 +17,13 @@
   <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6" wire:loading.class="opacity-50 transition">
     @foreach($projects as $index => $project)
       <a href="{{ route('projects.show', $project->slug) }}"
-         class="group block relative overflow-hidden rounded-2xl bg-white dark:bg-slate-950/30 border border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10 hover:ring-1 hover:ring-indigo-500/20 transition-all duration-500 anim-project-card opacity-0">
+         class="group block relative overflow-hidden rounded-2xl bg-white dark:bg-slate-950/30 border border-slate-200 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-500/10 hover:ring-1 hover:ring-indigo-500/20 transition-all duration-500 anim-project-card">
         
         <div class="aspect-video w-full overflow-hidden bg-slate-100 dark:bg-slate-900">
           @if($project->cover_image)
             <img src="{{ asset('storage/' . $project->cover_image) }}" alt="{{ $project->title }}" class="h-full w-full object-cover group-hover:scale-105 transition duration-700">
+          @elseif($project->gallery_images && count($project->gallery_images) > 0)
+            <img src="{{ asset('storage/' . $project->gallery_images[0]) }}" alt="{{ $project->title }}" class="h-full w-full object-cover group-hover:scale-105 transition duration-700">
           @else
             <div class="flex h-full w-full items-center justify-center text-slate-400">No Image</div>
           @endif
